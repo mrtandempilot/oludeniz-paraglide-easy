@@ -23,10 +23,16 @@ const Hero = () => {
           </span>
         </h1>
         
-        <p className="text-xl md:text-2xl text-white/90 mb-8 drop-shadow-md max-w-2xl mx-auto">
+        <p className="text-xl md:text-2xl text-white/90 mb-6 drop-shadow-md max-w-2xl mx-auto">
           Türkiye'nin muhteşem Mavi Lagün'ü üzerinde uçun. Dünyanın en güzel 
           kıyı şeritlerinden biri üzerinde sertifikalı eğitmenlerle tandem yamaç paraşütü heyecanını yaşayın.
         </p>
+        
+        <div className="mb-8 flex justify-center">
+          <div className="bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-full text-lg font-bold animate-pulse shadow-lg">
+            🎯 ÖZEL KAMPANYA: 3500 TL
+          </div>
+        </div>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button 
