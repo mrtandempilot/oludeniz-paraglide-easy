@@ -112,7 +112,7 @@ const Services = () => {
           <div className="space-y-2">
             <Award className="w-8 h-8 text-primary mx-auto" />
             <div className="font-semibold">Sertifikalı Pilotlar</div>
-            <div className="text-sm text-muted-foreground">15+ yıl deneyim</div>
+            <div className="text-sm text-muted-foreground">En az 20 yıl deneyim</div>
           </div>
           <div className="space-y-2">
             <Camera className="w-8 h-8 text-primary mx-auto" />
