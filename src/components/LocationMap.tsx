@@ -22,10 +22,11 @@ const LocationMap = () => {
 
     const oludenizLocation = { lat: 36.5500, lng: 29.1167 };
     const babadagLocation = { lat: 36.5789, lng: 29.1089 };
+    const eftelyaLocation = { lat: 36.6217, lng: 29.1164 };
 
     const mapInstance = new window.google.maps.Map(mapContainer.current, {
-      zoom: 12,
-      center: oludenizLocation,
+      zoom: 13,
+      center: eftelyaLocation,
       mapTypeId: 'satellite',
       tilt: 45,
       styles: [
@@ -37,6 +38,16 @@ const LocationMap = () => {
       ]
     });
 
+    // Eftelya Paragliding Agency marker (main location)
+    new window.google.maps.Marker({
+      position: eftelyaLocation,
+      map: mapInstance,
+      title: 'Eftelya Paragliding Agency',
+      icon: {
+        url: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png'
+      }
+    });
+
     // Ölüdeniz marker
     new window.google.maps.Marker({
       position: oludenizLocation,
@@ -45,6 +56,17 @@ const LocationMap = () => {
       icon: {
         url: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png'
       }
+    });
+
+    // Eftelya Agency info window
+    const eftelyaInfo = new window.google.maps.InfoWindow({
+      content: `
+        <div style="padding: 10px;">
+          <h3 style="margin: 0 0 5px 0; color: #333;">Eftelya Paragliding Agency</h3>
+          <p style="margin: 0; color: #666;">Yamaç paraşütü rezervasyon merkezi</p>
+          <p style="margin: 5px 0 0 0; color: #666; font-size: 12px;">3.8⭐ (74 değerlendirme)</p>
+        </div>
+      `
     });
 
     // Ölüdeniz info window
@@ -79,11 +101,19 @@ const LocationMap = () => {
 
     // Add click listeners for info windows
     new window.google.maps.Marker({
+      position: eftelyaLocation,
+      map: mapInstance,
+      title: 'Eftelya Paragliding Agency'
+    }).addListener('click', () => {
+      eftelyaInfo.open(mapInstance);
+    });
+
+    new window.google.maps.Marker({
       position: oludenizLocation,
       map: mapInstance,
       title: 'Ölüdeniz - İniş Noktası'
     }).addListener('click', () => {
-      oludenizInfo.open(mapInstance, babadagMarker);
+      oludenizInfo.open(mapInstance);
     });
 
     babadagMarker.addListener('click', () => {
