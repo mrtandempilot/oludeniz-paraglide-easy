@@ -2,10 +2,6 @@ import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-paragliding.jpg";
 
 const Hero = () => {
-  const scrollToBooking = () => {
-    const bookingSection = document.getElementById('booking');
-    bookingSection?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -38,10 +34,10 @@ const Hero = () => {
           <Button 
             variant="hero" 
             size="lg" 
-            onClick={scrollToBooking}
+            onClick={() => window.open('https://wa.me/905321234567', '_blank')}
             className="text-lg px-8 py-6"
           >
-            Uçuşunuzu Rezerve Edin
+            WhatsApp ile Rezerve Edin
           </Button>
           <Button 
             variant="outline" 
