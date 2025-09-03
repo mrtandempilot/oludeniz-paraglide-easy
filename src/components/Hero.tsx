@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-paragliding.jpg";
 
+console.log("Hero component loading, heroImage:", heroImage);
+
 const Hero = () => {
+  console.log("Hero component rendering");
   const scrollToBooking = () => {
     const bookingSection = document.getElementById('booking');
     bookingSection?.scrollIntoView({ behavior: 'smooth' });
