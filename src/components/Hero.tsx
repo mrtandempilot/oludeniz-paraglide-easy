@@ -50,6 +50,14 @@ const Hero = () => {
           >
             Daha Fazla Bilgi
           </Button>
+          <Button 
+            variant="outline" 
+            size="lg" 
+            onClick={() => window.open('https://wa.me/905321234567', '_blank')}
+            className="text-lg px-8 py-6 bg-green-600/80 border-green-500 text-white hover:bg-green-500/90 backdrop-blur-sm"
+          >
+            📱 WhatsApp Ara
+          </Button>
         </div>
         
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-white/90">
