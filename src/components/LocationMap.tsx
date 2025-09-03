@@ -5,12 +5,12 @@ import { MapPin, Phone, Clock, Navigation } from "lucide-react";
 const LocationMap = () => {
 
   return (
-    <section className="py-20 bg-gradient-to-b from-muted/20 to-background">
+    <section id="location" className="py-20 bg-gradient-to-b from-muted/20 to-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Konumumuz
-            <span className="text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text"> & İletişim</span>
+            Ölüdeniz Lokasyonu
+            <span className="text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text"> ve Buluşma Noktaları</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Fethiye Ölüdeniz'de Babadağ'dan kalkış yaparak Mavi Lagün üzerinde unutulmaz bir deneyim yaşayın

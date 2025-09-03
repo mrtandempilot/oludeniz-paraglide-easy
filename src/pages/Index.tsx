@@ -3,16 +3,20 @@ import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
 import LocationMap from "@/components/LocationMap";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <Hero />
-      <Services />
-      <Testimonials />
-      <LocationMap />
-      <Footer />
-    </div>
+    <>
+      <SEO />
+      <main className="min-h-screen">
+        <Hero />
+        <Services />
+        <Testimonials />
+        <LocationMap />
+        <Footer />
+      </main>
+    </>
   );
 };
 

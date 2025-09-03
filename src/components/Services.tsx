@@ -38,12 +38,12 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-muted/20">
+    <section id="services" className="py-20 bg-gradient-to-b from-background to-muted/20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Maceranızı
-            <span className="text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text"> Seçin</span>
+            Yamaç Paraşütü Paketlerimiz
+            <span className="text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text"> - Maceranızı Seçin</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Dünyaca ünlü Ölüdeniz Mavi Lagün üzerinde profesyonel tandem yamaç paraşütü deneyimleri
@@ -62,8 +62,9 @@ const Services = () => {
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src={pkg.image} 
-                  alt={pkg.title}
+                  alt={`${pkg.title} - Ölüdeniz yamaç paraşütü tandem uçuş ${pkg.duration} süresinde profesyonel eğitmenle`}
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               </div>

@@ -34,12 +34,12 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section id="testimonials" className="py-20 bg-muted/30">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Misafirlerimiz
-            <span className="text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text"> Ne Diyor</span>
+            Müşteri Yorumları
+            <span className="text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text"> - Misafirlerimiz Ne Diyor</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Sadece bizim sözümüze güvenmeyin - Ölüdeniz'in büyüsünü yukarıdan deneyimlemiş mutlu müşterilerimizden dinleyin
