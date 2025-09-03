@@ -8,7 +8,7 @@ const Services = () => {
   const packages = [
     {
       title: "Standart Uçuş",
-      price: "€80",
+      price: "3500 TL",
       duration: "20-25 dk",
       image: tandemImage,
       features: [
