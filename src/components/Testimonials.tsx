@@ -5,31 +5,31 @@ const Testimonials = () => {
   const testimonials = [
     {
       name: "Sarah Johnson",
-      country: "United Kingdom",
+      country: "İngiltere",
       rating: 5,
-      text: "Absolutely incredible experience! The view over Oludeniz was breathtaking and our instructor made us feel completely safe. The photos they took were professional quality. Highly recommend!",
-      date: "2 weeks ago"
+      text: "Kesinlikle inanılmaz bir deneyim! Ölüdeniz üzerindeki manzara nefes kesiciydi ve eğitmenimiz kendimizi tamamen güvende hissettirdi. Çektikleri fotoğraflar profesyonel kalitedeydi. Kesinlikle tavsiye ederim!",
+      date: "2 hafta önce"
     },
     {
       name: "Michael Schmidt",
-      country: "Germany", 
+      country: "Almanya", 
       rating: 5,
-      text: "Best activity we did in Turkey! The sunset flight was magical - floating above the Blue Lagoon as the sun set was unforgettable. Professional team and excellent value for money.",
-      date: "1 month ago"
+      text: "Türkiye'de yaptığımız en iyi aktivite! Gün batımı uçuşu büyülüyü - güneş batarken Mavi Lagün üzerinde süzülmek unutulmazdı. Profesyonel ekip ve paranın karşılığını fazlasıyla veriyor.",
+      date: "1 ay önce"
     },
     {
       name: "Emma & James",
-      country: "Australia",
+      country: "Avustralya",
       rating: 5,
-      text: "We were nervous at first but the instructors were so experienced and reassuring. The flight was smooth and the views were out of this world. Already planning to come back next year!",
-      date: "3 weeks ago"
+      text: "İlk başta gerginken ama eğitmenler o kadar deneyimli ve güven vericiydi ki. Uçuş çok pürüzsüzdü ve manzaralar bu dünyadan değildi. Gelecek yıl tekrar gelmeyi planlıyoruz!",
+      date: "3 hafta önce"
     },
     {
       name: "Marco Rossi",
-      country: "Italy",
+      country: "İtalya",
       rating: 5,
-      text: "Perfect organization from start to finish. Pickup was on time, equipment was top quality, and the 25-minute flight felt like it could have lasted forever. Thank you for an amazing experience!",
-      date: "1 week ago"
+      text: "Baştan sona mükemmel organizasyon. Alım zamanında geldi, ekipmanlar en üst kalitedeydi ve 25 dakikalık uçuş sonsuza kadar sürebilirdi. Bu harika deneyim için teşekkürler!",
+      date: "1 hafta önce"
     }
   ];
 
@@ -38,11 +38,11 @@ const Testimonials = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            What Our Guests
-            <span className="text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text"> Say</span>
+            Misafirlerimiz
+            <span className="text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text"> Ne Diyor</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Don't just take our word for it - hear from our happy customers who've experienced the magic of Oludeniz from above
+            Sadece bizim sözümüze güvenmeyin - Ölüdeniz'in büyüsünü yukarıdan deneyimlemiş mutlu müşterilerimizden dinleyin
           </p>
         </div>
 
@@ -82,15 +82,15 @@ const Testimonials = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
             <div className="text-center">
               <div className="text-4xl font-bold text-primary mb-2">500+</div>
-              <div className="text-sm text-muted-foreground">Happy Customers</div>
+              <div className="text-sm text-muted-foreground">Mutlu Müşteri</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-secondary mb-2">4.9★</div>
-              <div className="text-sm text-muted-foreground">Average Rating</div>
+              <div className="text-sm text-muted-foreground">Ortalama Puan</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-primary mb-2">100%</div>
-              <div className="text-sm text-muted-foreground">Would Recommend</div>
+              <div className="text-sm text-muted-foreground">Tavsiye Eder</div>
             </div>
           </div>
         </div>
