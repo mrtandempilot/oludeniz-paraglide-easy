@@ -38,26 +38,6 @@ const LocationMap = () => {
       ]
     });
 
-    // Eftelya Paragliding Agency marker (main location)
-    new window.google.maps.Marker({
-      position: eftelyaLocation,
-      map: mapInstance,
-      title: 'Eftelya Paragliding Agency',
-      icon: {
-        url: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png'
-      }
-    });
-
-    // Ölüdeniz marker
-    new window.google.maps.Marker({
-      position: oludenizLocation,
-      map: mapInstance,
-      title: 'Ölüdeniz - İniş Noktası',
-      icon: {
-        url: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png'
-      }
-    });
-
     // Eftelya Agency info window
     const eftelyaInfo = new window.google.maps.InfoWindow({
       content: `
@@ -79,16 +59,6 @@ const LocationMap = () => {
       `
     });
 
-    // Babadağ marker
-    const babadagMarker = new window.google.maps.Marker({
-      position: babadagLocation,
-      map: mapInstance,
-      title: 'Babadağ - Kalkış Noktası',
-      icon: {
-        url: 'https://maps.google.com/mapfiles/ms/icons/green-dot.png'
-      }
-    });
-
     // Babadağ info window
     const babadagInfo = new window.google.maps.InfoWindow({
       content: `
@@ -99,21 +69,43 @@ const LocationMap = () => {
       `
     });
 
-    // Add click listeners for info windows
-    new window.google.maps.Marker({
+    // Eftelya Paragliding Agency marker (main location)
+    const eftelyaMarker = new window.google.maps.Marker({
       position: eftelyaLocation,
       map: mapInstance,
-      title: 'Eftelya Paragliding Agency'
-    }).addListener('click', () => {
-      eftelyaInfo.open(mapInstance);
+      title: 'Eftelya Paragliding Agency',
+      icon: {
+        url: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png'
+      }
     });
 
-    new window.google.maps.Marker({
+    // Ölüdeniz marker
+    const oludenizMarker = new window.google.maps.Marker({
       position: oludenizLocation,
       map: mapInstance,
-      title: 'Ölüdeniz - İniş Noktası'
-    }).addListener('click', () => {
-      oludenizInfo.open(mapInstance);
+      title: 'Ölüdeniz - İniş Noktası',
+      icon: {
+        url: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png'
+      }
+    });
+
+    // Babadağ marker
+    const babadagMarker = new window.google.maps.Marker({
+      position: babadagLocation,
+      map: mapInstance,
+      title: 'Babadağ - Kalkış Noktası',
+      icon: {
+        url: 'https://maps.google.com/mapfiles/ms/icons/green-dot.png'
+      }
+    });
+
+    // Add click listeners for info windows
+    eftelyaMarker.addListener('click', () => {
+      eftelyaInfo.open(mapInstance, eftelyaMarker);
+    });
+
+    oludenizMarker.addListener('click', () => {
+      oludenizInfo.open(mapInstance, oludenizMarker);
     });
 
     babadagMarker.addListener('click', () => {
