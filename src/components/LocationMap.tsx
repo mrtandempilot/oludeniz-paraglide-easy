@@ -1,141 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Clock } from "lucide-react";
-
-declare global {
-  interface Window {
-    google: any;
-    initMap: () => void;
-  }
-}
+import { MapPin, Phone, Clock, Navigation } from "lucide-react";
 
 const LocationMap = () => {
-  const mapContainer = useRef<HTMLDivElement>(null);
-  const [googleApiKey, setGoogleApiKey] = useState('');
-  const [isMapLoaded, setIsMapLoaded] = useState(false);
-  const [map, setMap] = useState<any>(null);
-
-  const initializeMap = () => {
-    if (!mapContainer.current || !window.google) return;
-
-    const oludenizLocation = { lat: 36.5500, lng: 29.1167 };
-    const babadagLocation = { lat: 36.5789, lng: 29.1089 };
-    const eftelyaLocation = { lat: 36.6217, lng: 29.1164 };
-
-    const mapInstance = new window.google.maps.Map(mapContainer.current, {
-      zoom: 13,
-      center: eftelyaLocation,
-      mapTypeId: 'satellite',
-      tilt: 45,
-      styles: [
-        {
-          featureType: 'poi',
-          elementType: 'labels',
-          stylers: [{ visibility: 'on' }]
-        }
-      ]
-    });
-
-    // Eftelya Agency info window
-    const eftelyaInfo = new window.google.maps.InfoWindow({
-      content: `
-        <div style="padding: 10px;">
-          <h3 style="margin: 0 0 5px 0; color: #333;">Eftelya Paragliding Agency</h3>
-          <p style="margin: 0; color: #666;">Yamaç paraşütü rezervasyon merkezi</p>
-          <p style="margin: 5px 0 0 0; color: #666; font-size: 12px;">3.8⭐ (74 değerlendirme)</p>
-        </div>
-      `
-    });
-
-    // Ölüdeniz info window
-    const oludenizInfo = new window.google.maps.InfoWindow({
-      content: `
-        <div style="padding: 10px;">
-          <h3 style="margin: 0 0 5px 0; color: #333;">Ölüdeniz Mavi Lagün</h3>
-          <p style="margin: 0; color: #666;">İniş noktası - Dünyanın en güzel kıyı şeridi</p>
-        </div>
-      `
-    });
-
-    // Babadağ info window
-    const babadagInfo = new window.google.maps.InfoWindow({
-      content: `
-        <div style="padding: 10px;">
-          <h3 style="margin: 0 0 5px 0; color: #333;">Babadağ Kalkış Noktası</h3>
-          <p style="margin: 0; color: #666;">1969m yükseklik - Yamaç paraşütü kalkış</p>
-        </div>
-      `
-    });
-
-    // Eftelya Paragliding Agency marker (main location)
-    const eftelyaMarker = new window.google.maps.Marker({
-      position: eftelyaLocation,
-      map: mapInstance,
-      title: 'Eftelya Paragliding Agency',
-      icon: {
-        url: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png'
-      }
-    });
-
-    // Ölüdeniz marker
-    const oludenizMarker = new window.google.maps.Marker({
-      position: oludenizLocation,
-      map: mapInstance,
-      title: 'Ölüdeniz - İniş Noktası',
-      icon: {
-        url: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png'
-      }
-    });
-
-    // Babadağ marker
-    const babadagMarker = new window.google.maps.Marker({
-      position: babadagLocation,
-      map: mapInstance,
-      title: 'Babadağ - Kalkış Noktası',
-      icon: {
-        url: 'https://maps.google.com/mapfiles/ms/icons/green-dot.png'
-      }
-    });
-
-    // Add click listeners for info windows
-    eftelyaMarker.addListener('click', () => {
-      eftelyaInfo.open(mapInstance, eftelyaMarker);
-    });
-
-    oludenizMarker.addListener('click', () => {
-      oludenizInfo.open(mapInstance, oludenizMarker);
-    });
-
-    babadagMarker.addListener('click', () => {
-      babadagInfo.open(mapInstance, babadagMarker);
-    });
-
-    setMap(mapInstance);
-    setIsMapLoaded(true);
-  };
-
-  const loadGoogleMaps = (apiKey: string) => {
-    if (window.google) {
-      initializeMap();
-      return;
-    }
-
-    window.initMap = initializeMap;
-
-    const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
-    script.async = true;
-    script.defer = true;
-    document.head.appendChild(script);
-  };
-
-  const handleApiKeySubmit = () => {
-    if (googleApiKey.trim()) {
-      loadGoogleMaps(googleApiKey.trim());
-    }
-  };
 
   return (
     <section className="py-20 bg-gradient-to-b from-muted/20 to-background">
@@ -154,34 +21,37 @@ const LocationMap = () => {
           <Card className="overflow-hidden">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <MapPin className="w-5 h-5 text-primary" />
-                Google Harita
+                <Navigation className="w-5 h-5 text-primary" />
+                Konum Bilgileri
               </CardTitle>
             </CardHeader>
-            <CardContent className="p-0">
-              {!isMapLoaded && (
-                <div className="p-6 space-y-4">
-                  <p className="text-sm text-muted-foreground">
-                    Google Haritası'nı görüntülemek için Google Maps API key'inizi girin. 
-                    <a href="https://developers.google.com/maps/documentation/javascript/get-api-key" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline ml-1">
-                      Google Cloud Console
-                    </a> adresinden API key alabilirsiniz.
-                  </p>
-                  <div className="flex gap-2">
-                    <Input
-                      placeholder="Google Maps API Key"
-                      value={googleApiKey}
-                      onChange={(e) => setGoogleApiKey(e.target.value)}
-                      type="password"
-                    />
-                    <Button onClick={handleApiKeySubmit}>Yükle</Button>
+            <CardContent className="space-y-6">
+              <div className="space-y-4">
+                <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-lg border border-primary/10">
+                  <div className="w-3 h-3 rounded-full bg-blue-500 mt-1.5"></div>
+                  <div>
+                    <h4 className="font-semibold text-primary">Eftelya Paragliding Agency</h4>
+                    <p className="text-sm text-muted-foreground">Yamaç paraşütü rezervasyon merkezi</p>
+                    <p className="text-xs text-muted-foreground mt-1">3.8⭐ (74 değerlendirme)</p>
                   </div>
                 </div>
-              )}
-              <div 
-                ref={mapContainer} 
-                className={`w-full transition-all duration-300 ${isMapLoaded ? 'h-96' : 'h-0'}`}
-              />
+                
+                <div className="flex items-start gap-3 p-4 bg-red-50 dark:bg-red-950/20 rounded-lg border border-red-200 dark:border-red-800/30">
+                  <div className="w-3 h-3 rounded-full bg-red-500 mt-1.5"></div>
+                  <div>
+                    <h4 className="font-semibold text-red-700 dark:text-red-400">Ölüdeniz Mavi Lagün</h4>
+                    <p className="text-sm text-muted-foreground">İniş noktası - Dünyanın en güzel kıyı şeridi</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-3 p-4 bg-green-50 dark:bg-green-950/20 rounded-lg border border-green-200 dark:border-green-800/30">
+                  <div className="w-3 h-3 rounded-full bg-green-500 mt-1.5"></div>
+                  <div>
+                    <h4 className="font-semibold text-green-700 dark:text-green-400">Babadağ Kalkış Noktası</h4>
+                    <p className="text-sm text-muted-foreground">1969m yükseklik - Yamaç paraşütü kalkış</p>
+                  </div>
+                </div>
+              </div>
             </CardContent>
           </Card>
 
