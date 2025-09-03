@@ -22,8 +22,8 @@ const Services = () => {
     },
     {
       title: "Gün Batımı Uçuşu",
-      price: "€120",
-      duration: "25-30 dk", 
+      price: "4500 TL",
+      duration: "25-30 dk",
       image: sunsetImage,
       features: [
         "Altın saat deneyimi",
