@@ -9,31 +9,31 @@ const Services = () => {
   const { t } = useLanguage();
   const packages = [
     {
-      title: "Standart Uçuş",
+      title: "Standard Flight",
       price: "3200 TL",
       duration: "20-25 dk",
       image: tandemImage,
       features: [
-        "Profesyonel sertifikalı eğitmen",
-        "Tüm güvenlik ekipmanları dahil",
-        "Sigorta kapsamı",
-        "Temel fotoğraf paketi",
-        "Ölüdeniz'den transfer"
+        "services.features.instructor",
+        "services.features.equipment",
+        "services.features.insurance",
+        "services.features.photos",
+        "services.features.transfer"
       ],
       popular: false
     },
     {
-      title: "Gün Batımı Uçuşu",
+      title: "Sunset Flight",
       price: "3200 TL",
       duration: "25-30 dk",
       image: sunsetImage,
       features: [
-        "Altın saat deneyimi",
-        "Uzatılmış uçuş süresi",
-        "Profesyonel fotoğraf ve video",
-        "Şampanya tostı",
-        "Premium sigorta",
-        "Otel alımı dahil"
+        "services.features.golden.hour",
+        "services.features.extended",
+        "services.features.pro.media",
+        "services.features.champagne",
+        "services.features.premium.insurance",
+        "services.features.hotel.pickup"
       ],
       popular: true
     }
@@ -73,7 +73,7 @@ const Services = () => {
 
               <CardHeader>
                 <div className="flex justify-between items-start">
-                  <CardTitle className="text-2xl">{pkg.title === 'Standart Uçuş' ? t('services.standard.title') : t('services.sunset.title')}</CardTitle>
+                  <CardTitle className="text-2xl">{pkg.title === 'Standard Flight' ? t('services.standard.title') : t('services.sunset.title')}</CardTitle>
                   <div className="text-right">
                     <div className="text-3xl font-bold text-primary">{pkg.price}</div>
                     <div className="text-sm text-muted-foreground flex items-center gap-1">
@@ -89,7 +89,7 @@ const Services = () => {
                   {pkg.features.map((feature, i) => (
                     <li key={i} className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-primary rounded-full"></div>
-                      <span className="text-sm">{feature}</span>
+                      <span className="text-sm">{t(feature)}</span>
                     </li>
                   ))}
                 </ul>
@@ -99,7 +99,7 @@ const Services = () => {
                   className="w-full"
                   size="lg"
                 >
-                  {(pkg.title === 'Standart Uçuş' ? t('services.standard.title') : t('services.sunset.title'))} {t('services.reserve')}
+                  {(pkg.title === 'Standard Flight' ? t('services.standard.title') : t('services.sunset.title'))} {t('services.reserve')}
                 </Button>
               </CardContent>
             </Card>
@@ -109,23 +109,23 @@ const Services = () => {
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div className="space-y-2">
             <Users className="w-8 h-8 text-primary mx-auto" />
-            <div className="font-semibold">Tandem Uçuşlar</div>
-            <div className="text-sm text-muted-foreground">Deneyim gerekmiyor</div>
+            <div className="font-semibold">{t('services.info.tandem')}</div>
+            <div className="text-sm text-muted-foreground">{t('services.info.tandem.desc')}</div>
           </div>
           <div className="space-y-2">
             <Award className="w-8 h-8 text-primary mx-auto" />
-            <div className="font-semibold">Sertifikalı Pilotlar</div>
-            <div className="text-sm text-muted-foreground">En az 20 yıl deneyim</div>
+            <div className="font-semibold">{t('services.info.pilots')}</div>
+            <div className="text-sm text-muted-foreground">{t('services.info.pilots.desc')}</div>
           </div>
           <div className="space-y-2">
             <Camera className="w-8 h-8 text-primary mx-auto" />
-            <div className="font-semibold">Fotoğraf Paketi</div>
-            <div className="text-sm text-muted-foreground">Profesyonel çekimler dahil</div>
+            <div className="font-semibold">{t('services.info.photos')}</div>
+            <div className="text-sm text-muted-foreground">{t('services.info.photos.desc')}</div>
           </div>
           <div className="space-y-2">
             <Clock className="w-8 h-8 text-primary mx-auto" />
-            <div className="font-semibold">Günlük Uçuşlar</div>
-            <div className="text-sm text-muted-foreground">Hava durumu uygunsa</div>
+            <div className="font-semibold">{t('services.info.daily')}</div>
+            <div className="text-sm text-muted-foreground">{t('services.info.daily.desc')}</div>
           </div>
         </div>
       </div>
