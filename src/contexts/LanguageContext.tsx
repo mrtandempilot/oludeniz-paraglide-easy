@@ -13,7 +13,7 @@ const translations = {
     // Hero section
     'hero.title': 'Ölüdeniz',
     'hero.subtitle': 'Yamaç Paraşütü',
-    'hero.description': 'Fethiye\'de gökyüzüne çık, 3500 TL fırsatını kaçırma. Hemen rezervasyon yap!',
+    'hero.description': 'Dünyanın en iyi pilotlarıyla Fethiye semalarında özgürlüğü keşfet. 3500 TL fırsatını kaçırma!',
     'hero.special.offer': '🎯 ÖZEL KAMPANYA: 3500 TL',
     'hero.whatsapp': '📱 WhatsApp Ara',
     'hero.height': 'Uçuş Yüksekliği',
@@ -24,7 +24,7 @@ const translations = {
     // Hero section
     'hero.title': 'Ölüdeniz',
     'hero.subtitle': 'Paragliding',
-    'hero.description': 'Soar through the skies in Fethiye, don\'t miss the 3500 TL opportunity. Book now!',
+    'hero.description': 'Discover freedom in Fethiye skies with the world\'s best pilots. Don\'t miss the 3500 TL opportunity!',
     'hero.special.offer': '🎯 SPECIAL CAMPAIGN: 3500 TL',
     'hero.whatsapp': '📱 WhatsApp Call',
     'hero.height': 'Flight Altitude',
@@ -35,7 +35,7 @@ const translations = {
     // Hero section
     'hero.title': '厄吕代尼兹',
     'hero.subtitle': '滑翔伞',
-    'hero.description': '在费特希耶翱翔天空，不要错过3500里拉的机会。立即预订！',
+    'hero.description': '与世界顶级飞行员一起在费特希耶天空中发现自由。不要错过3500里拉的机会！',
     'hero.special.offer': '🎯 特别活动：3500里拉',
     'hero.whatsapp': '📱 WhatsApp电话',
     'hero.height': '飞行高度',
