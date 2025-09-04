@@ -14,10 +14,6 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/40" />
       
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
-        <div className="mb-6 text-white/95 text-xl md:text-2xl font-semibold drop-shadow-md">
-          Ölüdeniz Fethiye'nin Mavi Lagün'ü üzerinde 3200 TL'ye unutulmaz tandem uçuş.
-        </div>
-        
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg">
           Ölüdeniz
           <span className="block text-4xl md:text-6xl text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text">
