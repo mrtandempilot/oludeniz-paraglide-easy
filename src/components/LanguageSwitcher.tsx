@@ -5,7 +5,7 @@ const LanguageSwitcher = () => {
   const { language, setLanguage } = useLanguage();
 
   return (
-    <div className="fixed top-4 right-4 z-[100] flex gap-2">
+    <div className="fixed top-4 right-4 z-[9999] flex gap-2" style={{ position: 'fixed' }}>
       <Button
         variant={language === 'tr' ? 'default' : 'outline'}
         size="sm"
