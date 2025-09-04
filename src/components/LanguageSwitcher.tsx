@@ -10,7 +10,7 @@ const LanguageSwitcher = () => {
         variant={language === 'tr' ? 'default' : 'outline'}
         size="sm"
         onClick={() => setLanguage('tr')}
-        className="w-12 h-8 p-0 text-xs font-semibold bg-background/80 backdrop-blur-sm border-white/20 hover:bg-background/90"
+        className="w-16 h-10 p-0 text-lg font-semibold bg-background/80 backdrop-blur-sm border-white/20 hover:bg-background/90"
       >
         🇹🇷
       </Button>
@@ -18,7 +18,7 @@ const LanguageSwitcher = () => {
         variant={language === 'en' ? 'default' : 'outline'}
         size="sm"
         onClick={() => setLanguage('en')}
-        className="w-12 h-8 p-0 text-xs font-semibold bg-background/80 backdrop-blur-sm border-white/20 hover:bg-background/90"
+        className="w-16 h-10 p-0 text-lg font-semibold bg-background/80 backdrop-blur-sm border-white/20 hover:bg-background/90"
       >
         🇬🇧
       </Button>
@@ -26,7 +26,7 @@ const LanguageSwitcher = () => {
         variant={language === 'zh' ? 'default' : 'outline'}
         size="sm"
         onClick={() => setLanguage('zh')}
-        className="w-12 h-8 p-0 text-xs font-semibold bg-background/80 backdrop-blur-sm border-white/20 hover:bg-background/90"
+        className="w-16 h-10 p-0 text-lg font-semibold bg-background/80 backdrop-blur-sm border-white/20 hover:bg-background/90"
       >
         🇨🇳
       </Button>
