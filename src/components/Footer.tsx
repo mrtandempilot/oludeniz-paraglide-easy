@@ -1,6 +1,8 @@
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Mail, Phone, MapPin, Instagram, Facebook } from "lucide-react";
 
 const Footer = () => {
+  const { t } = useLanguage();
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-6 py-12">
@@ -8,8 +10,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold mb-4">Ölüdeniz Yamaç Paraşütü</h3>
             <p className="text-primary-foreground/80 mb-4 max-w-md">
-              Türkiye'nin en güzel kıyı şeridi üzerinde yamaç paraşütü heyecanını yaşayın. 
-              2008'den beri sertifikalı eğitmenlerle profesyonel tandem uçuşlar.
+              {t('footer.description')}
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
@@ -22,7 +23,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Hızlı Linkler</h4>
+            <h4 className="text-lg font-semibold mb-4">{t('footer.quick.links')}</h4>
             <ul className="space-y-2 text-primary-foreground/80">
               <li><a href="/" className="hover:text-white transition-colors" rel="canonical">Ana Sayfa - Ölüdeniz Yamaç Paraşütü</a></li>
               <li><a href="#services" className="hover:text-white transition-colors">Yamaç Paraşütü Paketleri</a></li>
@@ -33,7 +34,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">İletişim</h4>
+            <h4 className="text-lg font-semibold mb-4">{t('footer.contact')}</h4>
             <ul className="space-y-3 text-primary-foreground/80">
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
@@ -52,7 +53,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/20 mt-8 pt-8 text-center text-primary-foreground/60">
-          <p>&copy; 2024 Ölüdeniz Yamaç Paraşütü. Tüm hakları saklıdır. | Lisanslı ve Sigortalı Operatör</p>
+          <p>&copy; {t('footer.copyright')}</p>
         </div>
       </div>
     </footer>

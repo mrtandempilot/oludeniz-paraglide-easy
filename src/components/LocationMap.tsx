@@ -1,19 +1,21 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { MapPin, Phone, Clock, Navigation } from "lucide-react";
 
 const LocationMap = () => {
+  const { t } = useLanguage();
 
   return (
     <section id="location" className="py-20 bg-gradient-to-b from-muted/20 to-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ölüdeniz Lokasyonu
-            <span className="text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text"> ve Buluşma Noktaları</span>
+            {t('location.title')}
+            <span className="text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text"> {t('location.subtitle')}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Fethiye Ölüdeniz'de Babadağ'dan kalkış yaparak Mavi Lagün üzerinde unutulmaz bir deneyim yaşayın
+            {t('location.description')}
           </p>
         </div>
 
@@ -22,7 +24,7 @@ const LocationMap = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Navigation className="w-5 h-5 text-primary" />
-                Konum Bilgileri
+                {t('location.info')}
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -60,7 +62,7 @@ const LocationMap = () => {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <MapPin className="w-5 h-5 text-primary" />
-                  Adres
+                  {t('location.address')}
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -76,7 +78,7 @@ const LocationMap = () => {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Phone className="w-5 h-5 text-primary" />
-                  İletişim
+                  {t('location.contact')}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
@@ -110,7 +112,7 @@ const LocationMap = () => {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Clock className="w-5 h-5 text-primary" />
-                  Çalışma Saatleri
+                  {t('location.hours')}
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -128,7 +130,7 @@ const LocationMap = () => {
 
             <Card className="bg-gradient-to-r from-primary/10 to-secondary/10 border-primary/20">
               <CardContent className="p-6">
-                <h3 className="font-bold text-lg mb-2">Nasıl Ulaşırım?</h3>
+                <h3 className="font-bold text-lg mb-2">{t('location.how.to.reach')}</h3>
                 <ul className="text-sm text-muted-foreground space-y-1">
                   <li>• Dalaman Havalimanı'ndan 45 dakika</li>
                   <li>• Fethiye merkez'den 15 dakika</li>

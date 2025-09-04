@@ -1,7 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Star, Quote } from "lucide-react";
 
 const Testimonials = () => {
+  const { t } = useLanguage();
   const testimonials = [
     {
       name: "Sarah Johnson",
@@ -38,11 +40,11 @@ const Testimonials = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Müşteri Yorumları
-            <span className="text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text"> - Misafirlerimiz Ne Diyor</span>
+            {t('testimonials.title')}
+            <span className="text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text"> {t('testimonials.subtitle')}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Sadece bizim sözümüze güvenmeyin - Ölüdeniz'in büyüsünü yukarıdan deneyimlemiş mutlu müşterilerimizden dinleyin
+            {t('testimonials.description')}
           </p>
         </div>
 
@@ -82,15 +84,15 @@ const Testimonials = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
             <div className="text-center">
               <div className="text-4xl font-bold text-primary mb-2">500+</div>
-              <div className="text-sm text-muted-foreground">Mutlu Müşteri</div>
+              <div className="text-sm text-muted-foreground">{t('testimonials.stats.customers')}</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-secondary mb-2">4.9★</div>
-              <div className="text-sm text-muted-foreground">Ortalama Puan</div>
+              <div className="text-sm text-muted-foreground">{t('testimonials.stats.rating')}</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-primary mb-2">100%</div>
-              <div className="text-sm text-muted-foreground">Tavsiye Eder</div>
+              <div className="text-sm text-muted-foreground">{t('testimonials.stats.recommend')}</div>
             </div>
           </div>
         </div>

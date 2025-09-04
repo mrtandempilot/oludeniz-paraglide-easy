@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
 import tandemImage from "@/assets/tandem-flight.jpg";
 import sunsetImage from "@/assets/sunset-flight.jpg";
 import { Clock, Users, Camera, Award } from "lucide-react";
 
 const Services = () => {
+  const { t } = useLanguage();
   const packages = [
     {
       title: "Standart Uçuş",
@@ -42,11 +44,11 @@ const Services = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Yamaç Paraşütü Paketlerimiz
-            <span className="text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text"> - Maceranızı Seçin</span>
+            {t('services.title')}
+            <span className="text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text"> {t('services.subtitle')}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Dünyaca ünlü Ölüdeniz Mavi Lagün üzerinde profesyonel tandem yamaç paraşütü deneyimleri
+            {t('services.description')}
           </p>
         </div>
 
@@ -55,7 +57,7 @@ const Services = () => {
             <Card key={index} className={`relative overflow-hidden transition-all duration-300 hover:shadow-adventure ${pkg.popular ? 'ring-2 ring-primary scale-105' : ''}`}>
               {pkg.popular && (
                 <div className="absolute top-4 right-4 bg-gradient-to-r from-primary to-secondary text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
-                  En Popüler
+                  {t('services.popular')}
                 </div>
               )}
               
@@ -71,7 +73,7 @@ const Services = () => {
 
               <CardHeader>
                 <div className="flex justify-between items-start">
-                  <CardTitle className="text-2xl">{pkg.title}</CardTitle>
+                  <CardTitle className="text-2xl">{pkg.title === 'Standart Uçuş' ? t('services.standard.title') : t('services.sunset.title')}</CardTitle>
                   <div className="text-right">
                     <div className="text-3xl font-bold text-primary">{pkg.price}</div>
                     <div className="text-sm text-muted-foreground flex items-center gap-1">
@@ -97,7 +99,7 @@ const Services = () => {
                   className="w-full"
                   size="lg"
                 >
-                  {pkg.title} Rezerve Et
+                  {(pkg.title === 'Standart Uçuş' ? t('services.standard.title') : t('services.sunset.title'))} {t('services.reserve')}
                 </Button>
               </CardContent>
             </Card>
