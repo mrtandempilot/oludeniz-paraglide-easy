@@ -26,8 +26,7 @@ const Hero = () => {
         </h1>
         
         <p className="text-xl md:text-2xl text-white/90 mb-6 drop-shadow-md max-w-2xl mx-auto">
-          Türkiye'nin muhteşem Mavi Lagün'ü üzerinde uçun. Dünyanın en güzel 
-          kıyı şeritlerinden biri üzerinde sertifikalı eğitmenlerle tandem yamaç paraşütü heyecanını yaşayın.
+          Ölüdeniz Fethiye'nin Mavi Lagün'ü üzerinde 3200 TL'ye unutulmaz tandem uçuş.
         </p>
         
         <div className="mb-8 flex justify-center">
