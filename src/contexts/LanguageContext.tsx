@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, ReactNode } from 'react';
 
-type Language = 'tr' | 'en';
+type Language = 'tr' | 'en' | 'zh';
 
 interface LanguageContextType {
   language: Language;
@@ -30,6 +30,17 @@ const translations = {
     'hero.height': 'Flight Altitude',
     'hero.duration': 'Average Flight Time',
     'hero.safety': 'Safety Record',
+  },
+  zh: {
+    // Hero section
+    'hero.title': '厄吕代尼兹',
+    'hero.subtitle': '滑翔伞',
+    'hero.description': '在费特希耶翱翔天空，不要错过3500里拉的机会。立即预订！',
+    'hero.special.offer': '🎯 特别活动：3500里拉',
+    'hero.whatsapp': '📱 WhatsApp电话',
+    'hero.height': '飞行高度',
+    'hero.duration': '平均飞行时间',
+    'hero.safety': '安全记录',
   }
 };
 

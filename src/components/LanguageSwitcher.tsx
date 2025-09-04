@@ -22,6 +22,14 @@ const LanguageSwitcher = () => {
       >
         🇬🇧
       </Button>
+      <Button
+        variant={language === 'zh' ? 'default' : 'outline'}
+        size="sm"
+        onClick={() => setLanguage('zh')}
+        className="w-12 h-8 p-0 text-xs font-semibold bg-background/80 backdrop-blur-sm border-white/20 hover:bg-background/90"
+      >
+        🇨🇳
+      </Button>
     </div>
   );
 };
