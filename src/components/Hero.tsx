@@ -22,7 +22,7 @@ const Hero = () => {
         </h1>
         
         <p className="text-xl md:text-2xl text-white/90 mb-6 drop-shadow-md max-w-2xl mx-auto">
-          Ölüdeniz Fethiye'nin Mavi Lagün'ü üzerinde 3200 TL'ye unutulmaz tandem uçuş.
+          Fethiye'de gökyüzüne çık, 3200 TL fırsatını kaçırma. Hemen rezervasyon yap!
         </p>
         
         <div className="mb-8 flex justify-center">
