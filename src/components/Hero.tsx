@@ -34,14 +34,6 @@ const Hero = () => {
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button 
-            variant="hero" 
-            size="lg" 
-            onClick={() => window.open('https://wa.me/905321234567', '_blank')}
-            className="text-lg px-8 py-6"
-          >
-            WhatsApp ile Rezerve Edin
-          </Button>
-          <Button 
             variant="outline" 
             size="lg" 
             onClick={() => window.open('https://wa.me/905321234567', '_blank')}
