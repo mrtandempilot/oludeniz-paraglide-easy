@@ -9,29 +9,29 @@ const Testimonials = () => {
       name: "Sarah Johnson",
       country: "İngiltere",
       rating: 5,
-      text: "Kesinlikle inanılmaz bir deneyim! Ölüdeniz üzerindeki manzara nefes kesiciydi ve eğitmenimiz kendimizi tamamen güvende hissettirdi. Çektikleri fotoğraflar profesyonel kalitedeydi. Kesinlikle tavsiye ederim!",
-      date: "2 hafta önce"
+      textKey: "testimonials.sarah.text",
+      dateKey: "testimonials.date.2weeks"
     },
     {
       name: "Michael Schmidt",
       country: "Almanya", 
       rating: 5,
-      text: "Türkiye'de yaptığımız en iyi aktivite! Gün batımı uçuşu büyülüyü - güneş batarken Mavi Lagün üzerinde süzülmek unutulmazdı. Profesyonel ekip ve paranın karşılığını fazlasıyla veriyor.",
-      date: "1 ay önce"
+      textKey: "testimonials.michael.text",
+      dateKey: "testimonials.date.1month"
     },
     {
       name: "Emma & James",
       country: "Avustralya",
       rating: 5,
-      text: "İlk başta gerginken ama eğitmenler o kadar deneyimli ve güven vericiydi ki. Uçuş çok pürüzsüzdü ve manzaralar bu dünyadan değildi. Gelecek yıl tekrar gelmeyi planlıyoruz!",
-      date: "3 hafta önce"
+      textKey: "testimonials.emma.text",
+      dateKey: "testimonials.date.3weeks"
     },
     {
       name: "Marco Rossi",
       country: "İtalya",
       rating: 5,
-      text: "Baştan sona mükemmel organizasyon. Alım zamanında geldi, ekipmanlar en üst kalitedeydi ve 25 dakikalık uçuş sonsuza kadar sürebilirdi. Bu harika deneyim için teşekkürler!",
-      date: "1 hafta önce"
+      textKey: "testimonials.marco.text",
+      dateKey: "testimonials.date.1week"
     }
   ];
 
@@ -61,7 +61,7 @@ const Testimonials = () => {
                 </div>
 
                 <p className="text-muted-foreground mb-6 italic leading-relaxed">
-                  "{testimonial.text}"
+                  "{t(testimonial.textKey)}"
                 </p>
 
                 <div className="flex justify-between items-center">
@@ -70,7 +70,7 @@ const Testimonials = () => {
                     <div className="text-sm text-muted-foreground">{testimonial.country}</div>
                   </div>
                   <div className="text-xs text-muted-foreground">
-                    {testimonial.date}
+                    {t(testimonial.dateKey)}
                   </div>
                 </div>
 

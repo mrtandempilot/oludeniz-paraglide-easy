@@ -55,6 +55,14 @@ const translations = {
     'testimonials.stats.customers': 'Mutlu Müşteri',
     'testimonials.stats.rating': 'Ortalama Puan',
     'testimonials.stats.recommend': 'Tavsiye Eder',
+    'testimonials.sarah.text': 'Kesinlikle inanılmaz bir deneyim! Ölüdeniz üzerindeki manzara nefes kesiciydi ve eğitmenimiz kendimizi tamamen güvende hissettirdi. Çektikleri fotoğraflar profesyonel kalitedeydi. Kesinlikle tavsiye ederim!',
+    'testimonials.michael.text': 'Türkiye\'de yaptığımız en iyi aktivite! Gün batımı uçuşu büyülü - güneş batarken Mavi Lagün üzerinde süzülmek unutulmazdı. Profesyonel ekip ve paranın karşılığını fazlasıyla veriyor.',
+    'testimonials.emma.text': 'İlk başta gerginken ama eğitmenler o kadar deneyimli ve güven vericiydi ki. Uçuş çok pürüzsüzdü ve manzaralar bu dünyadan değildi. Gelecek yıl tekrar gelmeyi planlıyoruz!',
+    'testimonials.marco.text': 'Baştan sona mükemmel organizasyon. Alım zamanında geldi, ekipmanlar en üst kalitedeydi ve 25 dakikalık uçuş sonsuza kadar sürebilirdi. Bu harika deneyim için teşekkürler!',
+    'testimonials.date.2weeks': '2 hafta önce',
+    'testimonials.date.1month': '1 ay önce',
+    'testimonials.date.3weeks': '3 hafta önce',
+    'testimonials.date.1week': '1 hafta önce',
     
     // Location section
     'location.title': 'Ölüdeniz Lokasyonu',
@@ -65,12 +73,29 @@ const translations = {
     'location.contact': 'İletişim',
     'location.hours': 'Çalışma Saatleri',
     'location.how.to.reach': 'Nasıl Ulaşırım?',
+    'location.agency': 'Yamaç paraşütü rezervasyon merkezi',
+    'location.blue.lagoon': 'İniş noktası - Dünyanın en güzel kıyı şeridi',
+    'location.babadag': 'Yamaç paraşütü kalkış',
+    'location.address.text': 'Ölüdeniz Mahallesi\nBabadağ Yolu\n48300 Fethiye/Muğla',
+    'location.phone': 'Telefon:',
+    'location.email': 'E-posta:',
+    'location.hours.text': 'Pazartesi - Pazar: 09:00 - 18:00',
+    'location.hours.note': '* Hava koşullarına bağlı olarak değişebilir',
+    'location.transport.airport': '• Dalaman Havalimanı\'ndan 45 dakika',
+    'location.transport.center': '• Fethiye merkez\'den 15 dakika',
+    'location.transport.hotel': '• Ücretsiz otel transferi mevcut',
+    'location.transport.minibus': '• Kalkış noktasına minibüs servisi',
     
     // Footer section
     'footer.description': 'Türkiye\'nin en güzel kıyı şeridi üzerinde yamaç paraşütü heyecanını yaşayın. 2008\'den beri sertifikalı eğitmenlerle profesyonel tandem uçuşlar.',
     'footer.quick.links': 'Hızlı Linkler',
     'footer.contact': 'İletişim',
-    'footer.copyright': '2024 Ölüdeniz Yamaç Paraşütü. Tüm hakları saklıdır. | Lisanslı ve Sigortalı Operatör'
+    'footer.copyright': '2024 Ölüdeniz Yamaç Paraşütü. Tüm hakları saklıdır. | Lisanslı ve Sigortalı Operatör',
+    'footer.home': 'Ana Sayfa - Ölüdeniz Yamaç Paraşütü',
+    'footer.packages': 'Yamaç Paraşütü Paketleri',
+    'footer.reviews': 'Müşteri Yorumları',
+    'footer.location': 'Lokasyon & İletişim',
+    'footer.whatsapp': 'WhatsApp Rezervasyon'
   },
   en: {
     // Hero section
@@ -118,6 +143,14 @@ const translations = {
     'testimonials.stats.customers': 'Happy Customers',
     'testimonials.stats.rating': 'Average Rating',
     'testimonials.stats.recommend': 'Recommend',
+    'testimonials.sarah.text': 'Absolutely incredible experience! The view over Ölüdeniz was breathtaking and our instructor made us feel completely safe. The photos they took were professional quality. Definitely recommend!',
+    'testimonials.michael.text': 'Best activity we did in Turkey! The sunset flight was magical - gliding over the Blue Lagoon as the sun set was unforgettable. Professional team and more than worth the money.',
+    'testimonials.emma.text': 'We were nervous at first but the instructors were so experienced and reassuring. The flight was so smooth and the views were out of this world. Planning to come back next year!',
+    'testimonials.marco.text': 'Perfect organization from start to finish. Pickup was on time, equipment was top quality and the 25-minute flight could have lasted forever. Thank you for this amazing experience!',
+    'testimonials.date.2weeks': '2 weeks ago',
+    'testimonials.date.1month': '1 month ago',
+    'testimonials.date.3weeks': '3 weeks ago',
+    'testimonials.date.1week': '1 week ago',
     
     // Location section
     'location.title': 'Ölüdeniz Location',
@@ -128,12 +161,29 @@ const translations = {
     'location.contact': 'Contact',
     'location.hours': 'Working Hours',
     'location.how.to.reach': 'How to Reach?',
-    
+    'location.agency': 'Paragliding reservation center',
+    'location.blue.lagoon': 'Landing point - World\'s most beautiful coastline',
+    'location.babadag': 'Paragliding takeoff',
+    'location.address.text': 'Ölüdeniz Mahallesi\nBabadağ Yolu\n48300 Fethiye/Muğla',
+    'location.phone': 'Phone:',
+    'location.email': 'Email:',
+    'location.hours.text': 'Monday - Sunday: 09:00 - 18:00',
+    'location.hours.note': '* Subject to weather conditions',
+    'location.transport.airport': '• 45 minutes from Dalaman Airport',
+    'location.transport.center': '• 15 minutes from Fethiye center',
+    'location.transport.hotel': '• Free hotel transfer available',
+    'location.transport.minibus': '• Minibus service to takeoff point',
+
     // Footer section
     'footer.description': 'Experience the excitement of paragliding over Turkey\'s most beautiful coastline. Professional tandem flights with certified instructors since 2008.',
     'footer.quick.links': 'Quick Links',
     'footer.contact': 'Contact',
-    'footer.copyright': '2024 Ölüdeniz Paragliding. All rights reserved. | Licensed and Insured Operator'
+    'footer.copyright': '2024 Ölüdeniz Paragliding. All rights reserved. | Licensed and Insured Operator',
+    'footer.home': 'Home - Ölüdeniz Paragliding',
+    'footer.packages': 'Paragliding Packages',
+    'footer.reviews': 'Customer Reviews',
+    'footer.location': 'Location & Contact',
+    'footer.whatsapp': 'WhatsApp Reservation'
   },
   zh: {
     // Hero section
@@ -181,6 +231,14 @@ const translations = {
     'testimonials.stats.customers': '满意客户',
     'testimonials.stats.rating': '平均评分',
     'testimonials.stats.recommend': '推荐',
+    'testimonials.sarah.text': '绝对令人难以置信的体验！厄吕代尼兹的景色令人叹为观止，我们的教练让我们感到完全安全。他们拍摄的照片质量很专业。绝对推荐！',
+    'testimonials.michael.text': '我们在土耳其做的最好的活动！日落飞行很神奇——夕阳西下时在蓝色泻湖上滑翔令人难忘。专业团队，物超所值。',
+    'testimonials.emma.text': '起初我们很紧张，但教练们经验丰富，令人安心。飞行非常平稳，景色美得不像话。计划明年再来！',
+    'testimonials.marco.text': '从头到尾的完美组织。接送准时，设备一流，25分钟的飞行可以永远持续下去。感谢这次美妙的体验！',
+    'testimonials.date.2weeks': '2周前',
+    'testimonials.date.1month': '1个月前',
+    'testimonials.date.3weeks': '3周前',
+    'testimonials.date.1week': '1周前',
     
     // Location section
     'location.title': '厄吕代尼兹位置',
@@ -191,12 +249,29 @@ const translations = {
     'location.contact': '联系方式',
     'location.hours': '工作时间',
     'location.how.to.reach': '如何到达？',
-    
+    'location.agency': '滑翔伞预订中心',
+    'location.blue.lagoon': '着陆点 - 世界最美海岸线',
+    'location.babadag': '滑翔伞起飞点',
+    'location.address.text': 'Ölüdeniz Mahallesi\nBabadağ Yolu\n48300 Fethiye/Muğla',
+    'location.phone': '电话：',
+    'location.email': '邮箱：',
+    'location.hours.text': '周一 - 周日：09:00 - 18:00',
+    'location.hours.note': '* 根据天气条件可能变化',
+    'location.transport.airport': '• 距离达拉曼机场45分钟',
+    'location.transport.center': '• 距离费特希耶中心15分钟',
+    'location.transport.hotel': '• 提供免费酒店接送',
+    'location.transport.minibus': '• 到起飞点的小巴服务',
+
     // Footer section
     'footer.description': '在土耳其最美丽的海岸线上体验滑翔伞的刺激。自2008年以来与认证教练进行专业双人飞行。',
     'footer.quick.links': '快速链接',
     'footer.contact': '联系方式',
-    'footer.copyright': '2024年厄吕代尼兹滑翔伞。保留所有权利。| 持证和投保运营商'
+    'footer.copyright': '2024年厄吕代尼兹滑翔伞。保留所有权利。| 持证和投保运营商',
+    'footer.home': '首页 - 厄吕代尼兹滑翔伞',
+    'footer.packages': '滑翔伞套餐',
+    'footer.reviews': '客户评价',
+    'footer.location': '位置和联系方式',
+    'footer.whatsapp': 'WhatsApp预订'
   }
 };
 

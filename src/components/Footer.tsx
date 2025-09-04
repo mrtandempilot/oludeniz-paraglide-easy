@@ -25,11 +25,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">{t('footer.quick.links')}</h4>
             <ul className="space-y-2 text-primary-foreground/80">
-              <li><a href="/" className="hover:text-white transition-colors" rel="canonical">Ana Sayfa - Ölüdeniz Yamaç Paraşütü</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Yamaç Paraşütü Paketleri</a></li>
-              <li><a href="#testimonials" className="hover:text-white transition-colors">Müşteri Yorumları</a></li>
-              <li><a href="#location" className="hover:text-white transition-colors">Lokasyon & İletişim</a></li>
-              <li><a href="https://wa.me/905321234567" className="hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">WhatsApp Rezervasyon</a></li>
+              <li><a href="/" className="hover:text-white transition-colors" rel="canonical">{t('footer.home')}</a></li>
+              <li><a href="#services" className="hover:text-white transition-colors">{t('footer.packages')}</a></li>
+              <li><a href="#testimonials" className="hover:text-white transition-colors">{t('footer.reviews')}</a></li>
+              <li><a href="#location" className="hover:text-white transition-colors">{t('footer.location')}</a></li>
+              <li><a href="https://wa.me/905321234567" className="hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">{t('footer.whatsapp')}</a></li>
             </ul>
           </div>
 

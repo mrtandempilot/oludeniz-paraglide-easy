@@ -33,7 +33,7 @@ const LocationMap = () => {
                   <div className="w-3 h-3 rounded-full bg-blue-500 mt-1.5"></div>
                   <div>
                     <h4 className="font-semibold text-primary">Eftelya Paragliding Agency</h4>
-                    <p className="text-sm text-muted-foreground">Yamaç paraşütü rezervasyon merkezi</p>
+                    <p className="text-sm text-muted-foreground">{t('location.agency')}</p>
                     <p className="text-xs text-muted-foreground mt-1">3.8⭐ (74 değerlendirme)</p>
                   </div>
                 </div>
@@ -42,7 +42,7 @@ const LocationMap = () => {
                   <div className="w-3 h-3 rounded-full bg-red-500 mt-1.5"></div>
                   <div>
                     <h4 className="font-semibold text-red-700 dark:text-red-400">Ölüdeniz Mavi Lagün</h4>
-                    <p className="text-sm text-muted-foreground">İniş noktası - Dünyanın en güzel kıyı şeridi</p>
+                    <p className="text-sm text-muted-foreground">{t('location.blue.lagoon')}</p>
                   </div>
                 </div>
                 
@@ -50,7 +50,7 @@ const LocationMap = () => {
                   <div className="w-3 h-3 rounded-full bg-green-500 mt-1.5"></div>
                   <div>
                     <h4 className="font-semibold text-green-700 dark:text-green-400">Babadağ Kalkış Noktası</h4>
-                    <p className="text-sm text-muted-foreground">1969m yükseklik - Yamaç paraşütü kalkış</p>
+                    <p className="text-sm text-muted-foreground">1969m yükseklik - {t('location.babadag')}</p>
                   </div>
                 </div>
               </div>
@@ -67,9 +67,9 @@ const LocationMap = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Ölüdeniz Mahallesi<br />
-                  Babadağ Yolu<br />
-                  48300 Fethiye/Muğla
+                  {t('location.address.text').split('\n').map((line, i) => (
+                    <span key={i}>{line}<br /></span>
+                  ))}
                 </p>
               </CardContent>
             </Card>
@@ -83,7 +83,7 @@ const LocationMap = () => {
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="flex items-center gap-2">
-                  <span className="font-medium">Telefon:</span>
+                  <span className="font-medium">{t('location.phone')}</span>
                   <a href="tel:+905321234567" className="text-primary hover:underline">
                     +90 532 123 45 67
                   </a>
@@ -100,7 +100,7 @@ const LocationMap = () => {
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="font-medium">E-posta:</span>
+                  <span className="font-medium">{t('location.email')}</span>
                   <a href="mailto:info@oludenizparagliding.com" className="text-primary hover:underline">
                     info@oludenizparagliding.com
                   </a>
@@ -118,11 +118,10 @@ const LocationMap = () => {
               <CardContent>
                 <div className="space-y-2 text-muted-foreground">
                   <div className="flex justify-between">
-                    <span>Pazartesi - Pazar:</span>
-                    <span>09:00 - 18:00</span>
+                    <span>{t('location.hours.text')}</span>
                   </div>
                   <div className="text-sm text-muted-foreground">
-                    * Hava koşullarına bağlı olarak değişebilir
+                    {t('location.hours.note')}
                   </div>
                 </div>
               </CardContent>
@@ -132,10 +131,10 @@ const LocationMap = () => {
               <CardContent className="p-6">
                 <h3 className="font-bold text-lg mb-2">{t('location.how.to.reach')}</h3>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• Dalaman Havalimanı'ndan 45 dakika</li>
-                  <li>• Fethiye merkez'den 15 dakika</li>
-                  <li>• Ücretsiz otel transferi mevcut</li>
-                  <li>• Kalkış noktasına minibüs servisi</li>
+                  <li>{t('location.transport.airport')}</li>
+                  <li>{t('location.transport.center')}</li>
+                  <li>{t('location.transport.hotel')}</li>
+                  <li>{t('location.transport.minibus')}</li>
                 </ul>
               </CardContent>
             </Card>
