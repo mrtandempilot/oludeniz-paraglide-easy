@@ -44,13 +44,6 @@ const Hero = () => {
           <Button 
             variant="outline" 
             size="lg" 
-            className="text-lg px-8 py-6 bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm"
-          >
-            Daha Fazla Bilgi
-          </Button>
-          <Button 
-            variant="outline" 
-            size="lg" 
             onClick={() => window.open('https://wa.me/905321234567', '_blank')}
             className="text-lg px-8 py-6 bg-green-600/80 border-green-500 text-white hover:bg-green-500/90 backdrop-blur-sm"
           >
