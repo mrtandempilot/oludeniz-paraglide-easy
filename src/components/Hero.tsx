@@ -17,7 +17,7 @@ const Hero = () => {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/40" />
       
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-6 mt-16">
+      <div className="relative z-10 text-center max-w-4xl mx-auto px-6 mt-24">
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg">
           {t('hero.title')}
           <span className="block text-4xl md:text-6xl text-white drop-shadow-xl">
