@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg">
           Ölüdeniz
-          <span className="block text-4xl md:text-6xl text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text">
+          <span className="block text-4xl md:text-6xl text-white drop-shadow-xl">
             Yamaç Paraşütü
           </span>
         </h1>
