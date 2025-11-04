@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://yoursite.lovable.app/</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://yoursite.lovable.app/hero-paragliding.jpg</image:loc>
+      <image:title>Ölüdeniz Yamaç Paraşütü Hero Görsel</image:title>
+      <image:caption>Ölüdeniz Mavi Lagün üzerinde yamaç paraşütü tandem uçuş deneyimi</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yoursite.lovable.app/tandem-flight.jpg</image:loc>
+      <image:title>Tandem Yamaç Paraşütü Uçuşu</image:title>
+      <image:caption>Profesyonel eğitmenle güvenli tandem yamaç paraşütü uçuşu</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yoursite.lovable.app/sunset-flight.jpg</image:loc>
+      <image:title>Gün Batımı Yamaç Paraşütü Uçuşu</image:title>
+      <image:caption>Ölüdeniz'de muhteşem gün batımı manzarasıyla yamaç paraşütü deneyimi</image:caption>
+    </image:image>
+  </url>
+</urlset>
