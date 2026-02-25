@@ -49,7 +49,7 @@ const LocationMap = () => {
                 <div className="flex items-start gap-3 p-4 bg-green-50 dark:bg-green-950/20 rounded-lg border border-green-200 dark:border-green-800/30">
                   <div className="w-3 h-3 rounded-full bg-green-500 mt-1.5"></div>
                   <div>
-                    <h4 className="font-semibold text-green-700 dark:text-green-400">Babadağ Kalkış Noktası</h4>
+                    <h4 className="font-semibold text-green-700 dark:text-green-400">{t('location.babadag.title')}</h4>
                     <p className="text-sm text-muted-foreground">1969m yükseklik - {t('location.babadag')}</p>
                   </div>
                 </div>
