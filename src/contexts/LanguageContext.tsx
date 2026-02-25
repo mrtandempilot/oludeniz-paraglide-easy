@@ -10,7 +10,7 @@ interface LanguageContextType {
 
 const translations = {
   tr: {
-    // Hero section
+    // Hero
     'hero.title': 'Ölüdeniz',
     'hero.subtitle': 'Yamaç Paraşütü',
     'hero.description': 'Dünyanın en iyi pilotlarıyla Fethiye semalarında özgürlüğü keşfet. 3500 TL fırsatını kaçırma!',
@@ -19,15 +19,24 @@ const translations = {
     'hero.height': 'Uçuş Yüksekliği',
     'hero.duration': 'Ortalama Uçuş Süresi',
     'hero.safety': 'Güvenlik Kaydı',
-    
-    // Services section
+    // Services
     'services.title': 'Yamaç Paraşütü Paketlerimiz',
     'services.subtitle': '- Maceranızı Seçin',
     'services.description': 'Dünyaca ünlü Ölüdeniz Mavi Lagün üzerinde profesyonel tandem yamaç paraşütü deneyimleri',
-    'services.standard.title': 'Standart Uçuş',
-    'services.sunset.title': 'Gün Batımı Uçuşu',
     'services.popular': 'En Popüler',
     'services.reserve': 'Rezerve Et',
+    // Tour titles
+    'services.standard.title': 'Standart Uçuş',
+    'services.sunset.title': 'Gün Batımı Uçuşu',
+    'services.earlybird.title': 'Sabah Erken Uçuş',
+    'services.photovideo.title': 'Fotoğraf & Video Paketi',
+    'services.vip.title': 'VIP Özel Uçuş',
+    'services.group.title': 'Grup Uçuşu',
+    // Badges
+    'services.badge.earlybird': '🌅 Erken Rezervasyon',
+    'services.badge.vip': '👑 VIP',
+    'services.badge.group': '👥 Grup İndirimi',
+    // Features
     'services.features.instructor': 'Profesyonel sertifikalı eğitmen',
     'services.features.equipment': 'Tüm güvenlik ekipmanları dahil',
     'services.features.insurance': 'Sigorta kapsamı',
@@ -36,9 +45,16 @@ const translations = {
     'services.features.golden.hour': 'Altın saat deneyimi',
     'services.features.extended': 'Uzatılmış uçuş süresi',
     'services.features.pro.media': 'Profesyonel fotoğraf ve video',
-    'services.features.champagne': 'Şampanya tostı',
+    'services.features.champagne': 'Şampanya tostu',
     'services.features.premium.insurance': 'Premium sigorta',
     'services.features.hotel.pickup': 'Otel alımı dahil',
+    'services.features.earlybird.time': 'Sabah 08:00 kalkış saati',
+    'services.features.gopro': 'GoPro kamera kaydı',
+    'services.features.drone': 'Drone çekimi dahil',
+    'services.features.private.pilot': 'Özel deneyimli pilot',
+    'services.features.group.min': 'Min. 4 kişi ile geçerli',
+    'services.features.group.discount': 'Kişi başı %12 indirim',
+    // Info stats
     'services.info.tandem': 'Tandem Uçuşlar',
     'services.info.tandem.desc': 'Deneyim gerekmiyor',
     'services.info.pilots': 'Sertifikalı Pilotlar',
@@ -47,8 +63,7 @@ const translations = {
     'services.info.photos.desc': 'Profesyonel çekimler dahil',
     'services.info.daily': 'Günlük Uçuşlar',
     'services.info.daily.desc': 'Hava durumu uygunsa',
-    
-    // Testimonials section
+    // Testimonials
     'testimonials.title': 'Müşteri Yorumları',
     'testimonials.subtitle': '- Misafirlerimiz Ne Diyor',
     'testimonials.description': 'Sadece bizim sözümüze güvenmeyin - Ölüdeniz\'in büyüsünü yukarıdan deneyimlemiş mutlu müşterilerimizden dinleyin',
@@ -63,8 +78,7 @@ const translations = {
     'testimonials.date.1month': '1 ay önce',
     'testimonials.date.3weeks': '3 hafta önce',
     'testimonials.date.1week': '1 hafta önce',
-    
-    // Location section
+    // Location
     'location.title': 'Ölüdeniz Lokasyonu',
     'location.subtitle': 've Buluşma Noktaları',
     'location.description': 'Fethiye Ölüdeniz\'de Babadağ\'dan kalkış yaparak Mavi Lagün üzerinde unutulmaz bir deneyim yaşayın',
@@ -86,8 +100,7 @@ const translations = {
     'location.transport.center': '• Fethiye merkez\'den 15 dakika',
     'location.transport.hotel': '• Ücretsiz otel transferi mevcut',
     'location.transport.minibus': '• Kalkış noktasına minibüs servisi',
-    
-    // Footer section
+    // Footer
     'footer.description': 'Türkiye\'nin en güzel kıyı şeridi üzerinde yamaç paraşütü heyecanını yaşayın. 2008\'den beri sertifikalı eğitmenlerle profesyonel tandem uçuşlar.',
     'footer.quick.links': 'Hızlı Linkler',
     'footer.contact': 'İletişim',
@@ -99,7 +112,7 @@ const translations = {
     'footer.whatsapp': 'WhatsApp Rezervasyon'
   },
   en: {
-    // Hero section
+    // Hero
     'hero.title': 'Ölüdeniz',
     'hero.subtitle': 'Paragliding',
     'hero.description': 'Discover freedom in Fethiye skies with the world\'s best pilots. Don\'t miss the 3500 TL opportunity!',
@@ -108,15 +121,24 @@ const translations = {
     'hero.height': 'Flight Altitude',
     'hero.duration': 'Average Flight Time',
     'hero.safety': 'Safety Record',
-    
-    // Services section
+    // Services
     'services.title': 'Our Paragliding Packages',
     'services.subtitle': '- Choose Your Adventure',
     'services.description': 'Professional tandem paragliding experiences over the world-famous Ölüdeniz Blue Lagoon',
-    'services.standard.title': 'Standard Flight',
-    'services.sunset.title': 'Sunset Flight',
     'services.popular': 'Most Popular',
     'services.reserve': 'Reserve',
+    // Tour titles
+    'services.standard.title': 'Standard Flight',
+    'services.sunset.title': 'Sunset Flight',
+    'services.earlybird.title': 'Early Morning Flight',
+    'services.photovideo.title': 'Photo & Video Package',
+    'services.vip.title': 'VIP Private Flight',
+    'services.group.title': 'Group Flight',
+    // Badges
+    'services.badge.earlybird': '🌅 Early Bird',
+    'services.badge.vip': '👑 VIP',
+    'services.badge.group': '👥 Group Discount',
+    // Features
     'services.features.instructor': 'Professional certified instructor',
     'services.features.equipment': 'All safety equipment included',
     'services.features.insurance': 'Insurance coverage',
@@ -128,6 +150,13 @@ const translations = {
     'services.features.champagne': 'Champagne toast',
     'services.features.premium.insurance': 'Premium insurance',
     'services.features.hotel.pickup': 'Hotel pickup included',
+    'services.features.earlybird.time': 'Morning 08:00 takeoff',
+    'services.features.gopro': 'GoPro camera recording',
+    'services.features.drone': 'Drone footage included',
+    'services.features.private.pilot': 'Private experienced pilot',
+    'services.features.group.min': 'Valid for min. 4 people',
+    'services.features.group.discount': '12% discount per person',
+    // Info stats
     'services.info.tandem': 'Tandem Flights',
     'services.info.tandem.desc': 'No experience required',
     'services.info.pilots': 'Certified Pilots',
@@ -136,8 +165,7 @@ const translations = {
     'services.info.photos.desc': 'Professional shots included',
     'services.info.daily': 'Daily Flights',
     'services.info.daily.desc': 'Weather permitting',
-    
-    // Testimonials section
+    // Testimonials
     'testimonials.title': 'Customer Reviews',
     'testimonials.subtitle': '- What Our Guests Say',
     'testimonials.description': 'Don\'t just take our word for it - hear from our happy customers who experienced the magic of Ölüdeniz from above',
@@ -152,8 +180,7 @@ const translations = {
     'testimonials.date.1month': '1 month ago',
     'testimonials.date.3weeks': '3 weeks ago',
     'testimonials.date.1week': '1 week ago',
-    
-    // Location section
+    // Location
     'location.title': 'Ölüdeniz Location',
     'location.subtitle': 'and Meeting Points',
     'location.description': 'Experience an unforgettable adventure by taking off from Babadağ in Fethiye Ölüdeniz over the Blue Lagoon',
@@ -175,8 +202,7 @@ const translations = {
     'location.transport.center': '• 15 minutes from Fethiye center',
     'location.transport.hotel': '• Free hotel transfer available',
     'location.transport.minibus': '• Minibus service to takeoff point',
-
-    // Footer section
+    // Footer
     'footer.description': 'Experience the excitement of paragliding over Turkey\'s most beautiful coastline. Professional tandem flights with certified instructors since 2008.',
     'footer.quick.links': 'Quick Links',
     'footer.contact': 'Contact',
@@ -188,7 +214,7 @@ const translations = {
     'footer.whatsapp': 'WhatsApp Reservation'
   },
   zh: {
-    // Hero section
+    // Hero
     'hero.title': '厄吕代尼兹',
     'hero.subtitle': '滑翔伞',
     'hero.description': '与世界顶级飞行员一起在费特希耶天空中发现自由。不要错过3500里拉的机会！',
@@ -197,15 +223,24 @@ const translations = {
     'hero.height': '飞行高度',
     'hero.duration': '平均飞行时间',
     'hero.safety': '安全记录',
-    
-    // Services section
+    // Services
     'services.title': '我们的滑翔伞套餐',
     'services.subtitle': '- 选择您的冒险',
     'services.description': '在世界著名的厄吕代尼兹蓝色泻湖上空的专业双人滑翔伞体验',
-    'services.standard.title': '标准飞行',
-    'services.sunset.title': '日落飞行',
     'services.popular': '最受欢迎',
     'services.reserve': '预订',
+    // Tour titles
+    'services.standard.title': '标准飞行',
+    'services.sunset.title': '日落飞行',
+    'services.earlybird.title': '清晨早鸟飞行',
+    'services.photovideo.title': '照片与视频套餐',
+    'services.vip.title': 'VIP 专属飞行',
+    'services.group.title': '团体飞行',
+    // Badges
+    'services.badge.earlybird': '🌅 早鸟优惠',
+    'services.badge.vip': '👑 VIP',
+    'services.badge.group': '👥 团体折扣',
+    // Features
     'services.features.instructor': '专业认证教练',
     'services.features.equipment': '包含所有安全设备',
     'services.features.insurance': '保险覆盖',
@@ -217,6 +252,13 @@ const translations = {
     'services.features.champagne': '香槟庆祝',
     'services.features.premium.insurance': '高级保险',
     'services.features.hotel.pickup': '包含酒店接送',
+    'services.features.earlybird.time': '早上08:00起飞',
+    'services.features.gopro': 'GoPro相机录制',
+    'services.features.drone': '包含无人机拍摄',
+    'services.features.private.pilot': '专属经验丰富飞行员',
+    'services.features.group.min': '最少4人有效',
+    'services.features.group.discount': '每人享12%折扣',
+    // Info stats
     'services.info.tandem': '双人飞行',
     'services.info.tandem.desc': '无需经验',
     'services.info.pilots': '认证飞行员',
@@ -225,8 +267,7 @@ const translations = {
     'services.info.photos.desc': '包含专业拍摄',
     'services.info.daily': '每日飞行',
     'services.info.daily.desc': '天气允许的情况下',
-    
-    // Testimonials section
+    // Testimonials
     'testimonials.title': '客户评价',
     'testimonials.subtitle': '- 客人们的评价',
     'testimonials.description': '不要只听我们的话 - 听听从空中体验厄吕代尼兹魅力的快乐客户的评价',
@@ -241,8 +282,7 @@ const translations = {
     'testimonials.date.1month': '1个月前',
     'testimonials.date.3weeks': '3周前',
     'testimonials.date.1week': '1周前',
-    
-    // Location section
+    // Location
     'location.title': '厄吕代尼兹位置',
     'location.subtitle': '和集合点',
     'location.description': '在费特希耶厄吕代尼兹的巴巴山起飞，在蓝色泻湖上空体验难忘的冒险',
@@ -264,8 +304,7 @@ const translations = {
     'location.transport.center': '• 距离费特希耶中心15分钟',
     'location.transport.hotel': '• 提供免费酒店接送',
     'location.transport.minibus': '• 到起飞点的小巴服务',
-
-    // Footer section
+    // Footer
     'footer.description': '在土耳其最美丽的海岸线上体验滑翔伞的刺激。自2008年以来与认证教练进行专业双人飞行。',
     'footer.quick.links': '快速链接',
     'footer.contact': '联系方式',
