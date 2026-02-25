@@ -1,32 +1,40 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
-import tandemImage from "@/assets/tandem-flight.jpg";
-import sunsetImage from "@/assets/sunset-flight.jpg";
-import { Clock, Users, Camera, Award } from "lucide-react";
+import { Clock, Users, Camera, Award, Star } from "lucide-react";
+import tourStandard from "@/assets/tour-standard.jpg";
+import tourSunset from "@/assets/tour-sunset.jpg";
+import tourEarlyBird from "@/assets/tour-early-bird.jpg";
+import tourPhotoVideo from "@/assets/tour-photo-video.jpg";
+import tourVip from "@/assets/tour-vip.jpg";
+import tourGroup from "@/assets/tour-group.jpg";
 
 const Services = () => {
   const { t } = useLanguage();
+
   const packages = [
     {
-      title: "Standard Flight",
-      price: "3200 TL",
+      key: "standard",
+      price: "3.200 TL",
       duration: "20-25 dk",
-      image: tandemImage,
+      image: tourStandard,
+      popular: false,
+      badge: null,
       features: [
         "services.features.instructor",
         "services.features.equipment",
         "services.features.insurance",
         "services.features.photos",
         "services.features.transfer"
-      ],
-      popular: false
+      ]
     },
     {
-      title: "Sunset Flight",
-      price: "3200 TL",
+      key: "sunset",
+      price: "3.800 TL",
       duration: "25-30 dk",
-      image: sunsetImage,
+      image: tourSunset,
+      popular: true,
+      badge: "services.popular",
       features: [
         "services.features.golden.hour",
         "services.features.extended",
@@ -34,10 +42,79 @@ const Services = () => {
         "services.features.champagne",
         "services.features.premium.insurance",
         "services.features.hotel.pickup"
-      ],
-      popular: true
+      ]
+    },
+    {
+      key: "earlybird",
+      price: "2.900 TL",
+      duration: "20-25 dk",
+      image: tourEarlyBird,
+      popular: false,
+      badge: "services.badge.earlybird",
+      features: [
+        "services.features.earlybird.time",
+        "services.features.instructor",
+        "services.features.equipment",
+        "services.features.insurance",
+        "services.features.transfer"
+      ]
+    },
+    {
+      key: "photovideo",
+      price: "4.200 TL",
+      duration: "20-25 dk",
+      image: tourPhotoVideo,
+      popular: false,
+      badge: null,
+      features: [
+        "services.features.gopro",
+        "services.features.pro.media",
+        "services.features.drone",
+        "services.features.instructor",
+        "services.features.equipment",
+        "services.features.insurance"
+      ]
+    },
+    {
+      key: "vip",
+      price: "5.500 TL",
+      duration: "35-45 dk",
+      image: tourVip,
+      popular: false,
+      badge: "services.badge.vip",
+      features: [
+        "services.features.extended",
+        "services.features.private.pilot",
+        "services.features.pro.media",
+        "services.features.premium.insurance",
+        "services.features.hotel.pickup",
+        "services.features.champagne"
+      ]
+    },
+    {
+      key: "group",
+      price: "2.800 TL",
+      duration: "20-25 dk",
+      image: tourGroup,
+      popular: false,
+      badge: "services.badge.group",
+      features: [
+        "services.features.group.min",
+        "services.features.instructor",
+        "services.features.equipment",
+        "services.features.insurance",
+        "services.features.group.discount",
+        "services.features.transfer"
+      ]
     }
   ];
+
+  const badgeColors: Record<string, string> = {
+    "services.popular": "bg-gradient-to-r from-primary to-secondary text-primary-foreground",
+    "services.badge.earlybird": "bg-amber-500 text-white",
+    "services.badge.vip": "bg-purple-600 text-white",
+    "services.badge.group": "bg-green-600 text-white",
+  };
 
   return (
     <section id="services" className="py-20 bg-gradient-to-b from-background to-muted/20">
@@ -52,54 +129,60 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {packages.map((pkg, index) => (
-            <Card key={index} className={`relative overflow-hidden transition-all duration-300 hover:shadow-adventure ${pkg.popular ? 'ring-2 ring-primary scale-105' : ''}`}>
-              {pkg.popular && (
-                <div className="absolute top-4 right-4 bg-gradient-to-r from-primary to-secondary text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
-                  {t('services.popular')}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {packages.map((pkg) => (
+            <Card key={pkg.key} className={`relative overflow-hidden transition-all duration-300 hover:shadow-adventure hover:-translate-y-1 ${pkg.popular ? 'ring-2 ring-primary' : ''}`}>
+              {pkg.badge && (
+                <div className={`absolute top-4 right-4 ${badgeColors[pkg.badge] || 'bg-primary text-primary-foreground'} px-3 py-1 rounded-full text-xs font-semibold z-10`}>
+                  {t(pkg.badge)}
                 </div>
               )}
-              
+
               <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={pkg.image} 
-                  alt={`${pkg.title} - Ölüdeniz yamaç paraşütü tandem uçuş ${pkg.duration} süresinde profesyonel eğitmenle`}
+                <img
+                  src={pkg.image}
+                  alt={`${t(`services.${pkg.key}.title`)} - Ölüdeniz yamaç paraşütü`}
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-3 left-3 text-white">
+                  <div className="flex items-center gap-1 text-xs">
+                    <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
+                    <span>5.0</span>
+                  </div>
+                </div>
               </div>
 
-              <CardHeader>
-                <div className="flex justify-between items-start">
-                  <CardTitle className="text-2xl">{pkg.title === 'Standard Flight' ? t('services.standard.title') : t('services.sunset.title')}</CardTitle>
-                  <div className="text-right">
-                    <div className="text-3xl font-bold text-primary">{pkg.price}</div>
-                    <div className="text-sm text-muted-foreground flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
+              <CardHeader className="pb-2">
+                <div className="flex justify-between items-start gap-2">
+                  <CardTitle className="text-lg leading-tight">{t(`services.${pkg.key}.title`)}</CardTitle>
+                  <div className="text-right shrink-0">
+                    <div className="text-2xl font-bold text-primary">{pkg.price}</div>
+                    <div className="text-xs text-muted-foreground flex items-center gap-1 justify-end">
+                      <Clock className="w-3 h-3" />
                       {pkg.duration}
                     </div>
                   </div>
                 </div>
               </CardHeader>
 
-              <CardContent className="space-y-6">
-                <ul className="space-y-3">
+              <CardContent className="space-y-4">
+                <ul className="space-y-2">
                   {pkg.features.map((feature, i) => (
                     <li key={i} className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-primary rounded-full"></div>
-                      <span className="text-sm">{t(feature)}</span>
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full shrink-0"></div>
+                      <span className="text-sm text-muted-foreground">{t(feature)}</span>
                     </li>
                   ))}
                 </ul>
 
-                <Button 
-                  variant={pkg.popular ? "hero" : "default"} 
+                <Button
+                  variant={pkg.popular ? "hero" : "default"}
                   className="w-full"
-                  size="lg"
+                  size="sm"
                 >
-                  {(pkg.title === 'Standard Flight' ? t('services.standard.title') : t('services.sunset.title'))} {t('services.reserve')}
+                  {t(`services.${pkg.key}.title`)} - {t('services.reserve')}
                 </Button>
               </CardContent>
             </Card>
